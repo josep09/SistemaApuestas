@@ -140,12 +140,28 @@ ul li {
 }
 
 .section-title {
-  color: #313131;
+  color: #000000;
   letter-spacing: 1px;
   margin: 0 0 20px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
 }
+
+/*******
+*OJO*****************************************************************
+*OJO*****************************************************************
+*OJO*****************************************************************
+******
+***/
+
+#admin-area {
+  background: rgba(255, 255, 255, 0.822);
+  width: 100%;
+  position: relative;
+  padding: 200px 700px 200px 0px;
+}
+
 
 /* 
  * 3.0 Helper Class
@@ -247,7 +263,7 @@ ul li {
     letter-spacing: 1px;
     margin: 0 0 60px;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
   }
 }
 /* 
