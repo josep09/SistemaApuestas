@@ -89,7 +89,7 @@ public class RegistroControlador extends HttpServlet {
             request.setAttribute("insercion", "NO");
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/index.html");
+        RequestDispatcher rd = request.getRequestDispatcher("/home.jsp");
         rd.forward(request, response);
 
     }
