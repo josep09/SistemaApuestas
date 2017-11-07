@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.Date;
+
 /**
  *
  * @author Jose
@@ -14,6 +16,7 @@ public class Apuesta {
     private int id ;
     private String marcador;
     private Jugador jugador;
+    private Date horaApuesta; 
 
     public int getId() {
         return id;
@@ -37,6 +40,14 @@ public class Apuesta {
 
     public void setJugador(Jugador jugador) {
         this.jugador = jugador;
+    }
+
+    public Date getHoraApuesta() {
+        return horaApuesta;
+    }
+
+    public void setHoraApuesta(Date horaApuesta) {
+        this.horaApuesta = horaApuesta;
     }
     
     

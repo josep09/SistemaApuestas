@@ -444,6 +444,11 @@ ul li {
 /* 
  * 6.4 Section: Registration & Pricing
  */
+.bg-primary {
+  background-color: rgb(202, 24, 8) !important;
+  
+}
+
 /* 
  * 6.5 Section: Contribution
  */
@@ -586,8 +591,14 @@ ul li {
 
   .section-title {
     margin: 0 0 30px;
+    text-align: left;
   }
-
+  
+  .section-title-register {
+    margin: 0 0 30px;
+    text-align: center;
+  }
+  
   figure {
     margin-bottom: 0;
   }

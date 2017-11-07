@@ -7,10 +7,14 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import modelo.Jugador;
+import services.JugadorServices;
 
 /**
  *
@@ -30,9 +34,31 @@ public class JugadorLoginControlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try {
+            Jugador jugador = new Jugador();
+
+            jugador.setApodo(request.getParameter("apodo"));
+            jugador.setContrasena(request.getParameter("contrasena"));
             
+            if (JugadorServices.LoginJugador(request.getParameter("apodo"), request.getParameter("contrasena"))) {
+                
+                jugador.setApodo(String.valueOf(request.getParameter("apodo")));
+                JugadorServices js = new JugadorServices();
+                js.GetJugador();
+
+                HttpSession sessionUser = request.getSession();
+                sessionUser.setAttribute("apodo", jugador.getApodo());
+
+                RequestDispatcher rd1 = request.getRequestDispatcher("HomeJugador.jsp");
+                rd1.forward(request, response);
+            } else {
+                RequestDispatcher rd2 = request.getRequestDispatcher("home.jsp");
+
+            }
+        } catch(IOException e){
+            System.out.println("No se ha encontrado el jugador");
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

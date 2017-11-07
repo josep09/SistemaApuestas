@@ -134,8 +134,6 @@
                         <img alt="" class="img-responsive" src="assets/images/about-us.jpg">
                     </figure>
 
-
-
                 </div>
                 <!-- /.col-sm-6 -->
             </div>
@@ -145,48 +143,52 @@
     </section>
 
 
-    <section id="registration" class="section registration">
+    <section id="registration" class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <center><h3 class="section-title">Regístrate para participar</h3></center>
+                <div class="col-lg-12 mx-auto text-center">
+
+                    <div class="col-md-12">
+                        <h3 class="section-title"><center>Regístrate para participar</center></h3>
+                    </div>
+
+
+                    <form action="RegistroControlador" method="post">
+                        <div class="row">
+                            <div class="col-md-12" id="registration-msg" style="display:none;">
+                                <div class="alert"></div>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <div class="form-group text-center">
+                                    <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Apodo" id="apodo" name="apodo" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Contraseña" id="email" name="contrasena" required>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="text-center mt20">
+                            <button type="submit" class="btn btn-black" id="registration-submit-btn">Registrarme</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-
-            <form action="RegistroControlador" method="post">
-                <div class="row">
-                    <div class="col-md-12" id="registration-msg" style="display:none;">
-                        <div class="alert"></div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Apodo" id="apodo" name="apodo" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Contraseña" id="email" name="contrasena" required>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div class="text-center mt20">
-                    <button type="submit" class="btn btn-black" id="registration-submit-btn">Registrarme</button>
-                </div>
-            </form>
         </div>
     </section>
 
@@ -199,7 +201,7 @@
                 </div>
             </div>
 
-            <form action="#" id="registration-form">
+            <form action="JugadorLoginControlador" method="post">
                 <div class="row">
                     <div class="col-md-12" id="registration-msg" style="display:none;">
                         <div class="alert"></div>
