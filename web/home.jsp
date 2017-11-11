@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +22,7 @@
 
                     <!-- logo -->
                     <div class="site-branding">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="home.jsp">
 
                             <!-- logo image  -->
                             <img src="assets/images/logo.png" alt="Logo"> APUESTAS SYSTEM
@@ -43,7 +44,7 @@
 
                         <!-- navigation menu -->
                         <li class="active">
-                            <a data-scroll href="index.html">Inicio</a>
+                            <a data-scroll href="home.jsp">Inicio</a>
                         </li>
                         <li>
                             <a data-scroll href="#about">Noticias del mundial</a>
@@ -212,7 +213,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Contraseña" id="contrasena" name="contrasena" required>
+                            <input type="password" class="form-control" placeholder="Contraseña" id="contrasena" name="contrasena" required>
                         </div>
 
 
@@ -235,7 +236,7 @@
                 </div>
             </div>
 
-            <form action="#" id="registration-form">
+            <form action="AdminLoginControlador" method="post">
                 <div class="row">
                     <div class="col-md-12" id="registration-msg" style="display:none;">
                         <div class="alert"></div>
@@ -246,7 +247,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Contraseña" id="contrasena" name="contrasena" required>
+                            <input type="password" class="form-control" placeholder="Contraseña" id="contrasena" name="contrasena" required>
                         </div>
 
 

@@ -38,6 +38,7 @@ public class JugadorDao {
                     = this.conexion.prepareStatement(consulta);
             //-----------------------------------
             statement.setString(1, jugador.getNombre());
+            System.out.println(jugador.getNombre());
             statement.setString(2, jugador.getApellido());
             statement.setString(3, jugador.getApodo());
             statement.setString(4, jugador.getCorreo());

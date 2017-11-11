@@ -8,6 +8,10 @@
         <servlet-name>RegistroControlador</servlet-name>
         <servlet-class>controlador.RegistroControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminLoginControlador</servlet-name>
+        <servlet-class>controlador.AdminLoginControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>JugadorLoginControlador</servlet-name>
         <url-pattern>/JugadorLoginControlador</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>RegistroControlador</servlet-name>
         <url-pattern>/RegistroControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLoginControlador</servlet-name>
+        <url-pattern>/AdminLoginControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

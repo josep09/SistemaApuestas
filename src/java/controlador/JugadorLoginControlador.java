@@ -36,7 +36,6 @@ public class JugadorLoginControlador extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try {
             Jugador jugador = new Jugador();
-
             jugador.setApodo(request.getParameter("apodo"));
             jugador.setContrasena(request.getParameter("contrasena"));
             
@@ -49,10 +48,10 @@ public class JugadorLoginControlador extends HttpServlet {
                 HttpSession sessionUser = request.getSession();
                 sessionUser.setAttribute("apodo", jugador.getApodo());
 
-                RequestDispatcher rd1 = request.getRequestDispatcher("HomeJugador.jsp");
+                RequestDispatcher rd1 = request.getRequestDispatcher("/HomeJugador.jsp");
                 rd1.forward(request, response);
             } else {
-                RequestDispatcher rd2 = request.getRequestDispatcher("home.jsp");
+                RequestDispatcher rd2 = request.getRequestDispatcher("/home.jsp");
 
             }
         } catch(IOException e){
